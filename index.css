@@ -1,16 +1,37 @@
-body{
+body {
   padding: 0%;
   margin: 0%;
 }
-img {  
+p,span{
+  user-select: none;
+  padding: 0%;
+  margin: 0%;
+}
+p {
   position: absolute;
-  user-drag: none;  
+  width: 210px;
+  height: 48px;
+  left: 138px;
+  top: 21px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 48px;
+  
+}
+
+
+img {
+  position: absolute;
+  user-drag: none;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
 section {
   padding: 0%;
   margin: 0%;
@@ -20,6 +41,7 @@ section {
 section img {
   position: absolute;
 }
+
 .top {
   animation-name: fade;
   animation-timing-function: ease-in-out;
@@ -30,15 +52,18 @@ section img {
 
 @keyframes fade {
   0% {
-    opacity: 1;
+      opacity: 1;
   }
+
   25% {
-    opacity: 1;
+      opacity: 1;
   }
+
   75% {
-    opacity: 0;
+      opacity: 0;
   }
+
   100% {
-    opacity: 0;
+      opacity: 0;
   }
 }
