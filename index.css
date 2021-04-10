@@ -1,0 +1,44 @@
+body{
+  padding: 0%;
+  margin: 0%;
+}
+img {  
+  position: absolute;
+  user-drag: none;  
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+section {
+  padding: 0%;
+  margin: 0%;
+  position: relative;
+}
+
+section img {
+  position: absolute;
+}
+.top {
+  animation-name: fade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-direction: alternate;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
