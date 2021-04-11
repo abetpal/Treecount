@@ -14,6 +14,76 @@ top: 0px;
 background: #364854;
 box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.3);
 }
+img#img1{
+  display:none ;
+}
+.up:hover{
+  transition: ease-out 1s;
+  background: #53FF7E;
+border: 2px solid rgba(46, 58, 89, 0.2);
+border-radius: 8px;
+}
+.up:hover > #img1{
+  transition: ease-out 1s;
+  display: inline-block;
+}
+.up:hover > #img2{
+  display: none;
+}
+#tex{
+  color: #FFFFFF;
+}
+
+.up:hover > #tex{
+  color: #2E3A59;
+  
+}
+.up{
+  padding: 10px;
+  background: #202E39;
+border: 2px solid rgba(255, 255, 255, 0.2);
+border-radius: 8px;
+}
+.re{
+  width: 227.42px;
+height: 28.42px;
+  padding: 10px;
+  background: #202E39;
+border: 2px solid rgba(255, 255, 255, 0.2);
+border-radius: 8px;
+}
+.bu1{
+  padding: 0%;
+  height: 30px;
+  background: #202E39;
+  border: 0ch;
+  padding-left: 5px;
+}
+.bu2{
+  padding: 0%;
+  margin: 0%;
+  color: #FFFFFF;
+}
+.re:hover{
+  transition: ease-out 1s;
+  background: #53FF7E;
+border: 2px solid rgba(46, 58, 89, 0.2);
+border-radius: 8px;
+}
+.re:hover > button#reselect >#bu2{
+  color: #2E3A59;
+  
+}
+.re:hover > button#reselect{
+  transition: ease-out 1s;
+  background: #53FF7E;
+  
+}
+.re:hover > #re1{
+  transition: ease-out 1s;
+  transform:rotate(50deg);
+  
+}
 #paint {
   display: block;
   margin: 10px;
@@ -50,6 +120,6 @@ box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.3);
   }
   
   #sel{
-    display:block;font-family: Ubuntu;font-style: normal;font-weight: 500;font-size: 28.7634px;line-height: 33px;color: #FFFFFF;
-    text-align: center;top: 50px;
+    position: absolute;font-family: Ubuntu;font-style: normal;font-weight: 500;font-size: 25px;line-height: 33px;color: #FFFFFF;
+    left: 530px;top: 160px;user-select: none;opacity: .65;
   }
