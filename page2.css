@@ -1,145 +1,163 @@
-body{
+body {
   position: relative;
-background: #364854
+  background: #364854
 }
-.navbar{
+
+.navbar {
   padding: 0%;
   margin: 0%;
   display: block;
-width:100%;
-height: 90px;
-left: 0px;
-top: 0px;
+  width: 100%;
+  height: 90px;
+  left: 0px;
+  top: 0px;
+  background: #364854;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.3);
+}
 
-background: #364854;
-box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.3);
+img#img1 {
+  display: none ;
 }
-img#img1{
-  display:none ;
-}
-.up:hover{
+
+.up:hover {
   transition: ease-out 1s;
   background: #53FF7E;
-border: 2px solid rgba(46, 58, 89, 0.2);
-border-radius: 8px;
+  border: 2px solid rgba(46, 58, 89, 0.2);
+  border-radius: 8px;
 }
-.up:hover > #img1{
+
+.up:hover > #img1 {
   transition: ease-out 1s;
   display: inline-block;
 }
-.up:hover > #img2{
+
+.up:hover > #img2 {
   display: none;
 }
-#tex{
+
+#tex {
   color: #FFFFFF;
 }
 
-.up:hover > #tex{
+.up:hover > #tex {
   color: #2E3A59;
-  
 }
-.up{
+
+.up {
   padding: 10px;
   background: #202E39;
-border: 2px solid rgba(255, 255, 255, 0.2);
-border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
 }
-.re{
+
+.re {
   width: 227.42px;
-height: 26.42px;
+  height: 26.42px;
   padding: 10px;
   background: #202E39;
-border: 2px solid rgba(255, 255, 255, 0.2);
-border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
 }
-.bu1{
+
+.bu1 {
   padding: 0%;
   height: 30px;
   background: #202E39;
   border: 0ch;
   padding-left: 5px;
 }
-.bu2{
+
+.bu2 {
   padding: 0%;
   margin: 0%;
   color: #FFFFFF;
 }
-.re:hover{
+
+.re:hover {
   transition: ease-out 1s;
   background: #53FF7E;
-border: 2px solid rgba(46, 58, 89, 0.2);
-border-radius: 8px;
+  border: 2px solid rgba(46, 58, 89, 0.2);
+  border-radius: 8px;
 }
-.re:hover > button#reselect >#bu2{
+
+.re:hover > button#reselect >#bu2 {
   color: #2E3A59;
-  
 }
-.re:hover > button#reselect{
+
+.re:hover > button#reselect {
   transition: ease-out 1s;
   background: #53FF7E;
-  
 }
-.re:hover > #re1{
+
+.re:hover > #re1 {
   transition: ease-out 1s;
-  transform:rotate(50deg);
-  
+  transform: rotate(50deg);
 }
+
 #paint {
   display: block;
   margin: 30px;
-    border: 1px solid black;
-    background : #202E39;
-    opacity: 0.65;
-    margin-left: auto;
-    margin-right: auto;
-  
-  }
-  .con1,span {
-    user-select: none;
-    padding: 0%;
-    margin: 0%;
-  }
-  
-  .con1 {
-    width: 210px;
-    position: absolute;
-    width: 210px;
-    height: 48px;
-    left: 138px;
-    top: 21px;
-    
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 42px;
-    line-height: 48px;
-    
-    color: #53FF7E;
-    
+  border: 1px solid black;
+  background : #202E39;
+  opacity: 0.65;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  }
-  
-  #sel{
-    position: absolute;font-family: Ubuntu;font-style: normal;font-weight: 500;font-size: 25px;line-height: 33px;color: #FFFFFF;
-    left: 530px;top: 160px;user-select: none;opacity: .65;
-  }
-  .co{
-    width: 227.42px;
+.con1,span {
+  user-select: none;
+  padding: 0%;
+  margin: 0%;
+}
+
+.con1 {
+  width: 210px;
+  position: absolute;
+  width: 210px;
+  height: 48px;
+  left: 138px;
+  top: 21px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 48px;
+  color: #53FF7E;
+}
+
+#sel {
+  position: absolute;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 33px;
+  color: #FFFFFF;
+  left: 530px;
+  top: 160px;
+  user-select: none;
+  opacity: .65;
+}
+
+.co {
+  width: 227.42px;
   height: 26.42px;
-    padding: 10px;
-    background: #FFFFFF;
+  padding: 10px;
+  background: #FFFFFF;
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
-  }
-  .co2{
-    padding: 0%;
-    height: 30px;
-    background: #FFFFFF;
-    border: 0ch;
-    padding-left: 5px;
-  }
-  .co3{
-    padding: 0%;
-    margin: 0%;
-    color: #202E39;
-  }
+}
+
+.co2 {
+  padding: 0%;
+  height: 30px;
+  background: #FFFFFF;
+  border: 0ch;
+  padding-left: 5px;
+}
+
+.co3 {
+  padding: 0%;
+  margin: 0%;
+  color: #202E39;
+}
