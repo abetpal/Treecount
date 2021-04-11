@@ -57,7 +57,7 @@ canvas.addEventListener('mouseup', function() {
   drawOnce = "false";
 
 //checking for closed path or not
-  // m=0;
+   m=0;
   for (i = 0; i < coordinateX.length - 1; i++) {
     for (var j = i + 1; j < coordinateX.length; j++) {
       if ((coordinateX[i] == coordinateX[j]) && (coordinateY[i] == coordinateY[j]))
