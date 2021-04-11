@@ -2,11 +2,13 @@ body {
   padding: 0%;
   margin: 0%;
 }
-p,span{
+
+p,span {
   user-select: none;
   padding: 0%;
   margin: 0%;
 }
+
 p {
   position: absolute;
   width: 210px;
@@ -18,57 +20,57 @@ p {
   font-weight: bold;
   font-size: 42px;
   line-height: 48px;
-  
 }
-p.con{
+
+p.con {
   padding: 0%;
   margin: 0%;
   position: absolute;
-width: 708px;
-height: 210px;
-left: 128px;
-top: 210px;
-
-font-family: Ubuntu;
-font-style: normal;
-font-weight: bold;
-font-size: 91px;
-line-height: 105px;
-
-color: #FFFFFF;
+  width: 708px;
+  height: 210px;
+  left: 128px;
+  top: 210px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 91px;
+  line-height: 105px;
+  color: #FFFFFF;
 }
-.bu1{
-padding: 32px 64px;
-border-radius: 4px;
-position: absolute;
-width: 461px;
-height: 110px;
-left: 128px;
+
+.bu1 {
+  padding: 32px 64px;
+  border-radius: 4px;
+  position: absolute;
+  width: 461px;
+  height: 110px;
+  left: 128px;
   top: 587px;
   border: #53FF7E;
   background: #53FF7E;
 }
-h6{
+
+h6 {
   padding: 0%;
   margin: 0%;
   font-family: Ubuntu;
-font-style: normal;
-font-size: 40px;
+  font-style: normal;
+  font-size: 40px;
 }
-.bu1:hover{
-  transition:all .5s ease-out;
-padding: 32px 72px;
 
-position: absolute;
-width: 477px;
-height: 110px;
-left: 128px;
-top: 587px;
-
-background: #FFFFFF;
-border:0.4px solid #2B332D;
-box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.25);
+.bu1:hover {
+  transition: all .5s ease-out;
+  padding: 32px 72px;
+  position: absolute;
+  width: 477px;
+  height: 110px;
+  left: 128px;
+  top: 587px;
+  background: #FFFFFF;
+  border: 0.4px solid #2B332D;
+  box-shadow: 0px 4px 75px rgba(0, 0, 0, 0.25);
 }
+
 img {
   position: absolute;
   user-drag: none;
@@ -92,11 +94,12 @@ section img {
 .top {
   animation-name: fade;
   animation-timing-function: ease-in-out;
-  animation-iteration-count:1;
+  animation-iteration-count: 1;
   animation-duration: 4s;
   opacity: 0;
 }
-.con1 {  
+
+.con1 {
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -104,27 +107,35 @@ section img {
   margin-left: 30px;
   margin-top: 5px;
 }
-.con2{
+
+.con2 {
   position: absolute;
-width: 697px;
-height: 96px;
-left: 128px;
-top: 452px;
-
-font-family: Ubuntu;
-font-style: normal;
-font-weight: normal;
-font-size: 42px;
-line-height: 48px;
-
-color: #FFFFFF;
-
+  width: 697px;
+  height: 96px;
+  left: 128px;
+  top: 452px;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 48px;
+  color: #FFFFFF;
 }
+
 @keyframes floating {
-  from { transform: translate(0,  0px); }
-  65%  { transform: translate(0, 15px); }
-  to   { transform: translate(0, -0px); }    
+  from {
+      transform: translate(0, 0px);
+  }
+
+  65% {
+      transform: translate(0, 15px);
+  }
+
+  to {
+      transform: translate(0, -0px);
+  }
 }
+
 @keyframes fade {
   0% {
       opacity: 1;
