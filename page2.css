@@ -46,7 +46,7 @@ border-radius: 8px;
 }
 .re{
   width: 227.42px;
-height: 28.42px;
+height: 26.42px;
   padding: 10px;
   background: #202E39;
 border: 2px solid rgba(255, 255, 255, 0.2);
@@ -122,4 +122,24 @@ border-radius: 8px;
   #sel{
     position: absolute;font-family: Ubuntu;font-style: normal;font-weight: 500;font-size: 25px;line-height: 33px;color: #FFFFFF;
     left: 530px;top: 160px;user-select: none;opacity: .65;
+  }
+  .co{
+    width: 227.42px;
+  height: 26.42px;
+    padding: 10px;
+    background: #FFFFFF;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  }
+  .co2{
+    padding: 0%;
+    height: 30px;
+    background: #FFFFFF;
+    border: 0ch;
+    padding-left: 5px;
+  }
+  .co3{
+    padding: 0%;
+    margin: 0%;
+    color: #202E39;
   }
