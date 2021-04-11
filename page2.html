@@ -16,13 +16,19 @@
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Tree Count</h1>
-        <label for="uploader">Select file:</label>
-        <input type="file" id="uploader"/>
+        <div class="navbar"><p class="con1"><span style="color: #53FF7E;">Tree</span><span style="color: #ffffff;">count</span></p>
+        </div>
+        
         <!-- canvas -->
         <div id="sketch">
             <canvas id="paint"></canvas>
+            <p id="sel">select the area you want to count tree</p>
         </div>
         <script src="page2.js" charset="utf-8"></script>
+        <div style="display: block;">
+
+        <label for="uploader">Select file:</label>
+        <input type="file" id="uploader"/>
+        </div>
     </body>
 </html>

@@ -1,8 +1,55 @@
+body{
+  position: relative;
+background: #364854
+}
+.navbar{
+  padding: 0%;
+  margin: 0%;
+  display: block;
+width: 1920px;
+height: 90px;
+left: 0px;
+top: 0px;
+
+background: #364854;
+box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.3);
+}
 #paint {
+  display: block;
+  margin: 10px;
     border: 1px solid black;
-    background : white;
+    background : #202E39;
+    opacity: 0.65;
     margin-left: auto;
     margin-right: auto;
-    display: block;
+  
+  }
+  .con1,span {
+    user-select: none;
+    padding: 0%;
+    margin: 0%;
   }
   
+  .con1 {
+    width: 210px;
+    position: absolute;
+    width: 210px;
+    height: 48px;
+    left: 138px;
+    top: 21px;
+    
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 48px;
+    
+    color: #53FF7E;
+    
+
+  }
+  
+  #sel{
+    display:block;font-family: Ubuntu;font-style: normal;font-weight: 500;font-size: 28.7634px;line-height: 33px;color: #FFFFFF;
+    text-align: center;top: 50px;
+  }
