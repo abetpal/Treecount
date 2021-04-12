@@ -1,56 +1,66 @@
-<!--आज रपट जायें तो हमें ना कहियो
-    कल फिसल जायें तो हमें ना उठइयो
-    © HELLO TRAVELLLER!!
-    site designed and developed by 01000001011000100110100001101001011011100110000101110110001000000101000001100001011101000110010101101100,Aashima
--->
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width= device-width, initial-scale= 1.0">
-        <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
-        <title></title>
-        <link rel="shortcut icon" href="https://raw.githubusercontent.com/abetpal/portfolio/master/images/myAvatar.png">
-        <link rel="stylesheet" href="page2.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="navbar">
-            <p class="con1">
-                <span style="color: #53FF7E;">Tree</span>
-                <span style="color: #ffffff;">count</span>
-            </p>
-        </div>
-        <!-- canvas -->
-        <div id="sketch">
-            <canvas id="paint"></canvas>
-            <p id="sel">select the area you want to count tree</p>
-        </div>
-        <div style="display:inline;position:relative;top:  150px;">
-            <div style="display:flex;justify-content: center;align-items: center;padding: 20px 24px; margin:10px;">
-                <div class="up" style="padding: 10px;">
-                    <img id="img2" src="images/upload.png" alt="upload" style="height: 20px;width: 20px;">
-                    <img id="img1" src="images/Vector.png" alt="upload" style="height: 20px;width: 20px;">
-                    <input type="file" id="uploader" hidden/>
-                    <label id="tex" for="uploader" style="font-family: Ubuntu;font-style: normal;font-size:18px ;">Upload another image</label>
-                </div>
-                <div style="width: 10px;"></div>
-                <div class="re" style="text-align: center; ">
-                    <img src="images/refresh.png" id="re1" alt="reload">
-                    <button id="reselect" class="bu1" type="button">
-                        <h6 class="bu2" id='bu2' style="font-family: Ubuntu;font-size:18px;font-style: normal;">Reselect Region</h6>
-                    </button>
-                </div>
-                <div style="width: 10px;"></div>
-                <div class="co" style="justify-content: center; text-align: center;">
-                    <button id="co2" class="co2" type="button">
-                        <h6 class="co3" id='co3' style="font-family: Ubuntu;font-size:18px;font-style: normal;">Count</h6>
-                    </button>
-                    <img src="images/save.png" id="co1" alt="count">
-                </div>
-            </div>
-        </div>
-        <script src="page2.js" charset="utf-8"></script>
-    </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width= device-width, initial-scale= 1.0">
+  <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+  <title></title>
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/abetpal/portfolio/master/images/myAvatar.png">
+  <link rel="stylesheet" href="page2.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="navbar">
+    <p class="con1">
+      <span style="color: #53FF7E;">Tree</span>
+      <span style="color: #ffffff;">count</span>
+    </p>
+  </div>
+  <!-- canvas -->
+  <div id="sketch">
+    <img id="commonimg" src="images/img1.png" alt="upload">
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <canvas id="paint"></canvas>
+
+        <p id="sel" style="color: black">Select the area in which you want to Count Trees</p>
+      </div>
+
+    </div>
+    <p id="sel">Select the area in which you want to Count Trees</p>
+  </div>
+  <!-- <div style="display:inline;position:relative;top:  150px;"> -->
+  <div style="display:flex;justify-content: center;align-items: center;padding: 20px 24px; margin:10px; margin-top: 50px;">
+    <div class="up" style="padding: 10px;">
+      <img id="img2" src="images/upload.png" alt="upload" style="height: 20px;width: 20px;">
+      <img id="img1" src="images/Vector.png" alt="upload" style="height: 20px;width: 20px;">
+      <input type="file" id="uploader" hidden />
+      <label id="tex" for="uploader" style="font-family: Ubuntu;font-style: normal;font-size:18px ;">Upload another image</label>
+    </div>
+    <div style="width: 10px;"></div>
+    <div class="re" style="text-align: center; ">
+      <img src="images/refresh.png" id="re1" alt="reload">
+      <button id="reselect" class="bu1" type="button">
+        <h6 class="bu2" id='bu2' style="font-family: Ubuntu;font-size:18px;font-style: normal;">Reselect Region</h6>
+      </button>
+    </div>
+    <div style="width: 10px;"></div>
+    <div class="co" style="justify-content: center; text-align: center;">
+      <button id="co2" class="co2" type="button">
+        <h6 class="co3" id='co3' style="font-family: Ubuntu;font-size:18px;font-style: normal;">Count</h6>
+      </button>
+      <img src="images/save.png" id="co1" alt="count">
+    </div>
+  </div>
+  <!-- </div> -->
+  <script src="page2.js" charset="utf-8"></script>
+</body>
+
 </html>

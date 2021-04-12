@@ -5,8 +5,8 @@ var sketch = document.getElementById('sketch');
 var sketch_style = getComputedStyle(sketch);
 
 //canvas initial dimension
-canvas.width = 500;
-canvas.height = 250;
+canvas.width = 700;
+canvas.height = 393.25;
 
 //arrays storing values of x and y
 var coordinateX = [];
@@ -19,26 +19,25 @@ var m = 0;
 // drawing code
 //mouse initial coordinates
 var mouse = {
-    x: 0,
-    y: 0
+  x: 0,
+  y: 0
 };
 var drawOnce = "false";
 //this will ensure that user draw only once
 /* Mouse Capturing Work */
 
-document.querySelector('#reselect').addEventListener('click', ()=>{
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-    drawOnce = "true";
-    coordinateX = [];
-    coordinateY = [];
-    console.log(coordinateX, coordinateY);
+document.querySelector('#reselect').addEventListener('click', () => {
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  drawOnce = "true";
+  coordinateX = [];
+  coordinateY = [];
+  console.log(coordinateX, coordinateY);
 
-}
-);
+});
 
 canvas.addEventListener('mousemove', function(e) {
-    mouse.x = e.pageX - this.offsetLeft;
-    mouse.y = e.pageY - this.offsetTop;
+  mouse.x = e.pageX - this.offsetLeft;
+  mouse.y = e.pageY - this.offsetTop;
 }, false);
 
 /* Drawing on Paint App */
@@ -48,98 +47,156 @@ ctx.lineCap = 'round';
 ctx.strokeStyle = "black";
 
 canvas.addEventListener('mousedown', function(e) {
-    if (drawOnce == "true") {
-        ctx.beginPath();
-        ctx.moveTo(mouse.x, mouse.y);
-        canvas.addEventListener('mousemove', onPaint, false);
-    }
+  if (drawOnce == "true") {
+    ctx.beginPath();
+    ctx.moveTo(mouse.x, mouse.y);
+    canvas.addEventListener('mousemove', onPaint, false);
+  }
 
 }, false);
 
 canvas.addEventListener('mouseup', function() {
-    canvas.removeEventListener('mousemove', onPaint, false);
-    drawOnce = "false";
+  canvas.removeEventListener('mousemove', onPaint, false);
+  drawOnce = "false";
 
-    //checking for closed path or not
-    m = 0;
-    for (i = 0; i < coordinateX.length - 1; i++) {
-        for (var j = i + 1; j < coordinateX.length; j++) {
-            if ((coordinateX[i] == coordinateX[j]) && (coordinateY[i] == coordinateY[j]))
-                m++;
-        }
+  //checking for closed path or not
+  m = 0;
+  for (i = 0; i < coordinateX.length - 1; i++) {
+    for (var j = i + 1; j < coordinateX.length; j++) {
+      if ((coordinateX[i] == coordinateX[j]) && (coordinateY[i] == coordinateY[j]))
+        m++;
     }
-    console.log(m);
-    if (m >= 5) {
-        alert("Please select the region again");
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        drawOnce = "true";
-        coordinateX = [];
-        coordinateY = [];
-        console.log(coordinateX, coordinateY);
+  }
+  console.log(m);
+  if (m >= 5) {
+    alert("Please select the region again");
+    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    drawOnce = "true";
+    coordinateX = [];
+    coordinateY = [];
+    console.log(coordinateX, coordinateY);
 
-    } else {
-        alert("The selected region is");
-        selectedRegion();
-    }
+  } else {
+    alert("The selected region is");
+    selectedRegion();
+  }
 }, false);
 
 var onPaint = function() {
-    ctx.lineTo(mouse.x, mouse.y);
-    ctx.stroke();
-    // for (var i = 0; i < coordinateX.length-10; i++) {
-    // for (var i = 0; i <l; i++) {
-    //   if((coordinateX[i]==mouse.x)&&(coordinateY[i]==mouse.y)){
-    //     canvas.removeEventListener('mousemove', onPaint, false);
-    //     drawOnce = "false";
-    //   }
-    // }
-    if (coordinateX.length < l) {
-        coordinateX.push(mouse.x);
-        coordinateY.push(mouse.y);
-        console.log(coordinateX, coordinateY);
-        //this will console the x,y coordinates arrays
-    }
+  ctx.lineTo(mouse.x, mouse.y);
+  ctx.stroke();
+  // for (var i = 0; i < coordinateX.length-10; i++) {
+  // for (var i = 0; i <l; i++) {
+  //   if((coordinateX[i]==mouse.x)&&(coordinateY[i]==mouse.y)){
+  //     canvas.removeEventListener('mousemove', onPaint, false);
+  //     drawOnce = "false";
+  //   }
+  // }
+  if (coordinateX.length < l) {
+    coordinateX.push(mouse.x);
+    coordinateY.push(mouse.y);
+    console.log(coordinateX, coordinateY);
+    //this will console the x,y coordinates arrays
+  }
 };
 
 //this will show the region selected by the user
 var selectedRegion = function() {
-    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-    for (i = 0; i < coordinateX.length - 1; i++) {
-        ctx.beginPath();
-        ctx.moveTo(coordinateX[i], coordinateY[i]);
-        ctx.lineTo(coordinateX[i + 1], coordinateY[i + 1]);
-        ctx.stroke();
-    }
+  for (i = 0; i < coordinateX.length - 1; i++) {
+    ctx.beginPath();
+    ctx.moveTo(coordinateX[i], coordinateY[i]);
+    ctx.lineTo(coordinateX[i + 1], coordinateY[i + 1]);
+    ctx.stroke();
+  }
 
 }
 
 //uploading the image
 
-const reader = new FileReader();
-const img = new Image();
+var reader = new FileReader();
+var img = new Image();
 
-const uploadImage = (e)=>{
-    reader.onload = ()=>{
-        img.onload = ()=>{
-            // myPics.width = img.width;
-            // myPics.height = img.height;
-            canvas.width = img.naturalWidth;
-            canvas.height = img.naturalHeight;
-            // context.drawImage(img, 0, 0);
-            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-            drawOnce = "true";
-            coordinateX = [];
-            coordinateY = [];
-            console.log(coordinateX, coordinateY);
-        }
-        ;
-        img.src = reader.result;
-    }
-    ;
-    reader.readAsDataURL(e.target.files[0]);
-}
-;
+//this will load the default image
+img.onload = function() {
+  drawOnce = "true";
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+};
+img.src = 'images/img1.png';
+//this will upload different images
+const uploadImage = (e) => {
+  reader.onload = () => {
+    img.onload = () => {
+
+
+      let w = canvas.width;
+      let nw = img.naturalWidth;
+      let nh = img.naturalHeight;
+      let aspect = nw / nh;
+      let h = w / aspect;
+      console.log('height', h);
+      canvas.height = h;
+      ctx.drawImage(img, 0, 0, w, h);
+
+      document.getElementById("commonimg").src = reader.result;
+      drawOnce = "true";
+      coordinateX = [];
+      coordinateY = [];
+      console.log(coordinateX, coordinateY);
+    };
+    img.src = reader.result;
+  };
+  reader.readAsDataURL(e.target.files[0]);
+};
 
 const imageLoader = document.getElementById("uploader");
 imageLoader.addEventListener("change", uploadImage);
+
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("commonimg");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+commonimg.onmouseover = function() {
+  modal.style.display = "block";
+
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+// $(document).ready(function() {
+//   $('#paint').hover(function() {
+//     $('#bodyid,#navbarid,p,#para,#treeid,#countid').css({
+// "background-color": "black",
+// "color": "black",
+// "opacity"     : 2
+//
+// });
+//   }, function() {
+//     // on mouseout, reset the background colour
+//     $('#bodyid,#navbarid,p,#para,#treeid,#countid').css({
+// "background-color": '',
+// "color": '',
+// "opacity"     : 1
+//
+// });
+//   });
+// });

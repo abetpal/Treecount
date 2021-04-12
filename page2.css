@@ -15,8 +15,30 @@ body {
   box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.3);
 }
 
+#commonimg {
+  width: 32%;
+  /* width: 50%; */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 70px;
+  box-shadow: 0 0.3125rem 1.25rem rgb(0 0 0 / 70%);
+}
+
+#paint {
+  display: block;
+  margin: 30px;
+  /* border: 1px solid black; */
+  background: #202E39;
+  /* opacity: 0.65; */
+  margin-left: auto;
+  margin-right: auto;
+  /* border-radius: 0.625rem; */
+  box-shadow: 0 0.25rem 0.625rem rgb(0 0 0 / 70%);
+}
+
 img#img1 {
-  display: none ;
+  display: none;
 }
 
 .up:hover {
@@ -26,12 +48,12 @@ img#img1 {
   border-radius: 8px;
 }
 
-.up:hover > #img1 {
+.up:hover>#img1 {
   transition: ease-out 1s;
   display: inline-block;
 }
 
-.up:hover > #img2 {
+.up:hover>#img2 {
   display: none;
 }
 
@@ -39,7 +61,7 @@ img#img1 {
   color: #FFFFFF;
 }
 
-.up:hover > #tex {
+.up:hover>#tex {
   color: #2E3A59;
 }
 
@@ -80,31 +102,21 @@ img#img1 {
   border-radius: 8px;
 }
 
-.re:hover > button#reselect >#bu2 {
+.re:hover>button#reselect>#bu2 {
   color: #2E3A59;
 }
 
-.re:hover > button#reselect {
+.re:hover>button#reselect {
   transition: ease-out 1s;
   background: #53FF7E;
 }
 
-.re:hover > #re1 {
+.re:hover>#re1 {
   transition: ease-out 1s;
   transform: rotate(50deg);
 }
 
-#paint {
-  display: block;
-  margin: 30px;
-  border: 1px solid black;
-  background : #202E39;
-  opacity: 0.65;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.con1,span {
+.con1, span {
   user-select: none;
   padding: 0%;
   margin: 0%;
@@ -126,16 +138,22 @@ img#img1 {
 }
 
 #sel {
-  position: absolute;
+  /* display: block; */
+  /* position: inherit; */
   font-family: Ubuntu;
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
   line-height: 33px;
   color: #FFFFFF;
-  left: 530px;
-  top: 160px;
-  user-select: none;
+  text-align: center;
+  /* left: 530px; */
+  /* top: 160px; */
+  margin-top: 50px;
+  width: auto;
+  /* user-select: none; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
   opacity: .65;
 }
 
@@ -160,4 +178,55 @@ img#img1 {
   padding: 0%;
   margin: 0%;
   color: #202E39;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  /* top: 0; */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  /* background-color: rgba(0,0,0,0.4);  */
+  /* position: relative; */
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all .2s ease;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 2% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

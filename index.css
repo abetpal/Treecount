@@ -48,6 +48,7 @@ p.con {
   top: 587px;
   border: #53FF7E;
   background: #53FF7E;
+  transition: all .5s ease-out;
 }
 
 h6 {
@@ -59,7 +60,6 @@ h6 {
 }
 
 .bu1:hover {
-  transition: all .5s ease-out;
   padding: 32px 72px;
   position: absolute;
   width: 477px;
