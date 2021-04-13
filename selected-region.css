@@ -82,16 +82,15 @@ img#img1 {
   border-radius: 8px;
 }
 #sel1 {
-  position: absolute;
   font-family: Ubuntu;
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 33px;
   color: #FFFFFF;
-  left: 535px;
-  top: 250px;
-  user-select: none;
+  text-align: center;
+  margin-top: 50px;
+  width: auto;
   opacity: .65;
 }
 

@@ -164,7 +164,7 @@ var btn = document.getElementById("commonimg");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-commonimg.onmouseover = function() {
+commonimg.onclick = function() {
   modal.style.display = "block";
 
 }
