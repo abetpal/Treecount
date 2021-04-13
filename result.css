@@ -125,6 +125,7 @@ img#img1 {
   }
   
   .up {
+    padding-right: 10px;
       transition:all ease-out 1s;
     padding: 10px;
     background: #202E39;
