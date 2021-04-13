@@ -4,6 +4,10 @@ var ctx = canvas.getContext('2d');
 var sketch = document.getElementById('sketch');
 var sketch_style = getComputedStyle(sketch);
 
+//uploading the image
+var reader = new FileReader();
+var img = new Image();
+
 //canvas initial dimension
 canvas.width = 700;
 canvas.height = 393.25;
@@ -32,7 +36,7 @@ document.querySelector('#reselect').addEventListener('click', () => {
   coordinateX = [];
   coordinateY = [];
   console.log(coordinateX, coordinateY);
-
+  document.getElementById("commonimg").src= canvas.toDataURL();
 });
 
 canvas.addEventListener('mousemove', function(e) {
@@ -105,6 +109,8 @@ var onPaint = function() {
   }
 };
 
+
+
 //this will show the region selected by the user
 var selectedRegion = function() {
   ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
@@ -115,13 +121,21 @@ var selectedRegion = function() {
     ctx.lineTo(coordinateX[i + 1], coordinateY[i + 1]);
     ctx.stroke();
   }
+  // var newurl = canvas.toDataURL();
+  // img.onload = function() {
+  //   drawOnce = "true";
+  //   ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  // };
+  // img.src =  newurl;
+  // var dataURL = canvas.toDataURL();
+  //     img.src = dataURL;
+  // document.getElementById("defaultimg").style.display = "none";
+  // document.getElementById("commonimg").style.display = "block";
+
+      document.getElementById("commonimg").src= canvas.toDataURL();
 
 }
 
-//uploading the image
-
-var reader = new FileReader();
-var img = new Image();
 
 //this will load the default image
 img.onload = function() {
@@ -129,11 +143,12 @@ img.onload = function() {
   ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 };
 img.src = 'images/img1.png';
+// document.getElementById("commonimg").src= canvas.toDataURL();
+
 //this will upload different images
 const uploadImage = (e) => {
   reader.onload = () => {
     img.onload = () => {
-
 
       let w = canvas.width;
       let nw = img.naturalWidth;
@@ -145,6 +160,9 @@ const uploadImage = (e) => {
       ctx.drawImage(img, 0, 0, w, h);
 
       document.getElementById("commonimg").src = reader.result;
+      document.getElementById("defaultimg").style.display = "none";
+      document.getElementById("commonimg").style.display = "block";
+
       drawOnce = "true";
       coordinateX = [];
       coordinateY = [];
@@ -163,17 +181,21 @@ imageLoader.addEventListener("change", uploadImage);
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("commonimg");
-
+var btn1 = document.getElementById("defaultimg");
+var btn2 = document.getElementById("commonimg");
+// var btn = document.getElementsByClassName("tapimg");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-commonimg.onclick = function() {
+btn1.onclick = function() {
   modal.style.display = "block";
 
 }
+btn2.onclick = function() {
+  modal.style.display = "block";
 
+}
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
