@@ -39,6 +39,11 @@ body {
 
 img#img1 {
   display: none;
+  float: left;
+}
+
+img#img2 {
+  float: left;
 }
 
 .up:hover {
@@ -66,21 +71,31 @@ img#img1 {
 }
 
 .up {
-  transition: all ease-out 1s;
-  padding: 10px;
+  /* div upload class */
   background: #202E39;
+  transition: ease-out 1s;
+}
+
+.re {
+  /* div count class */
+  background: #202E39;
+  transition: ease-out 1s;
+}
+
+.co {
+  /* div reselect class  */
+  background: #FFFFFF;
+}
+
+.buttonclass {
+  width: 227.42px;
+  /* height: 26.42px; */
+  padding: 10px;
+  /* background: #FFFFFF; */
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
 }
 
-.re {
-  width: 227.42px;
-  height: 26.42px;
-  padding: 10px;
-  background: #202E39;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-}
 #sel1 {
   font-family: Ubuntu;
   font-style: normal;
@@ -95,21 +110,41 @@ img#img1 {
 }
 
 .bu1 {
+  /* div reselect button  */
   padding: 0%;
-  height: 30px;
+  /* height: 30px; */
   background: #202E39;
+  transition: ease-out 1s;
+  border: 0ch;
+  padding-left: 5px;
+}
+
+.co2 {
+  /* div count button  */
+  padding: 0%;
+  /* height: 30px; */
+  background: #FFFFFF;
   border: 0ch;
   padding-left: 5px;
 }
 
 .bu2 {
+  /* div reselect paragraph  */
   padding: 0%;
   margin: 0%;
   color: #FFFFFF;
+  display: flex;
+}
+
+.co3 {
+  /* div count paragraph  */
+  padding: 0%;
+  margin: 0%;
+  color: #202E39;
+  float: left;
 }
 
 .re:hover {
-  transition: ease-out 1s;
   background: #53FF7E;
   border: 2px solid rgba(46, 58, 89, 0.2);
   border-radius: 8px;
@@ -120,13 +155,16 @@ img#img1 {
 }
 
 .re:hover>button#reselect {
-  transition: ease-out 1s;
   background: #53FF7E;
 }
 
-.re:hover>#re1 {
+.re:hover>button#re1 {
   transition: ease-out 1s;
   transform: rotate(50deg);
+}
+
+#re1 {
+  float: left;
 }
 
 .con1, span {
@@ -168,29 +206,6 @@ img#img1 {
   /* margin-left: auto; */
   /* margin-right: auto; */
   opacity: .65;
-}
-
-.co {
-  width: 227.42px;
-  height: 26.42px;
-  padding: 10px;
-  background: #FFFFFF;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-}
-
-.co2 {
-  padding: 0%;
-  height: 30px;
-  background: #FFFFFF;
-  border: 0ch;
-  padding-left: 5px;
-}
-
-.co3 {
-  padding: 0%;
-  margin: 0%;
-  color: #202E39;
 }
 
 /* The Modal (background) */

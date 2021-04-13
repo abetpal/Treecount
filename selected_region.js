@@ -36,8 +36,13 @@ document.querySelector('#reselect').addEventListener('click', () => {
 });
 
 canvas.addEventListener('mousemove', function(e) {
-  mouse.x = e.pageX - this.offsetLeft;
-  mouse.y = e.pageY - this.offsetTop;
+  // mouse.x = e.pageX - this.offsetLeft;
+  // mouse.y = e.pageY - this.offsetTop;
+
+  var rect = canvas.getBoundingClientRect();  //this give the coordinates of the canvas
+  var root = document.documentElement;		//this gives the information about the html element
+   mouse.x = e.clientX - rect.left - root.scrollLeft;	//these two gives the mouse positions
+   mouse.y = e.clientY - rect.top - root.scrollTop;
 }, false);
 
 /* Drawing on Paint App */

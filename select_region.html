@@ -13,6 +13,10 @@
   <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
   <title>Treecount</title>
   <link rel="shortcut icon" href="https://raw.githubusercontent.com/abetpal/portfolio/master/images/myAvatar.png">
+
+  <!-- bootstrap cdn and css style sheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
   <link rel="stylesheet" href="selected-region.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
@@ -42,29 +46,45 @@
   </div>
   <!-- <div style="display:inline;position:relative;top:  150px;"> -->
   <div style="display:flex;justify-content: center;align-items: center;padding: 20px 24px; margin:10px; margin-top: 50px;">
-    <div class="up" style="padding: 10px;">
-      <img id="img2" src="images/upload.png" alt="upload" style="height: 20px;width: 20px;">
-      <img id="img1" src="images/Vector.png" alt="upload" style="height: 20px;width: 20px;">
-      <input type="file" id="uploader" hidden />
-      <label id="tex" for="uploader" style="font-family: Ubuntu;font-style: normal;font-size:18px ;">Upload image</label>
-    </div>
-    <div style="width: 10px;"></div>
-    <div class="re" style="text-align: center; ">
-      <img src="images/refresh.png" id="re1" alt="reload">
-      <button id="reselect" class="bu1" type="button">
-        <p class="bu2" id='bu2' style="font-family: Ubuntu;font-size:18px;font-style: normal;">Reselect Region</p>
-      </button>
-    </div>
-    <div style="width: 10px;"></div>
-    <div class="co" onclick="window.location.href='result.html';" style="justify-content: center; text-align: center;">
-      <button id="co2"  class="co2" type="button">
-        <h6 class="co3" id='co3' style="font-family: Ubuntu;font-size:18px;font-style: normal;">Count</h6>
-      </button>
-      <img src="images/save.png" id="co1" alt="count">
-    </div>
+    <form method="post" class="form-inline" enctype="multipart/form-data" action="{{ url_for('predictCaptionnn') }}">
+
+      <div class="up btn buttonclass" style="padding: 10px;">
+        <img id="img1" src="images/Vector.png" alt="upload" style="height: 20px;width: 20px;">
+
+        <input type="file" id="uploader" hidden />
+        <img id="img2" src="images/upload.png" alt="upload" style="height: 20px;width: 20px;">
+
+        <label id="tex" for="uploader" style="font-family: Ubuntu;font-style: normal;font-size:18px ;">Upload image</label>
+      </div>
+      <div style="width: 10px;"></div>
+      <div class="re btn buttonclass" style="text-align: center; ">
+        <button id="reselect" class="bu1" type="button">
+          <img src="images/refresh.png" id="re1" alt="reload">
+
+          <p class="bu2" id='bu2' style="font-family: Ubuntu;font-size:18px;font-style: normal;">Reselect Region</p>
+        </button>
+      </div>
+      <div style="width: 10px;"></div>
+      <!-- <div class="co" onclick="window.location.href='result.html';" style="justify-content: center; text-align: center;"> -->
+      <div class="co btn buttonclass" style="justify-content: center; text-align: center;">
+        <button id="co2" class="co2" type="submit" value="Submit">
+          <!--  this will submit the form -->
+          <p class="co3" id='co3' style="font-family: Ubuntu;font-size:18px;font-style: normal;">Count</p>
+          <img src="images/save.png" id="co1" alt="count">
+
+        </button>
+      </div>
+
+    </form>
+
   </div>
   <!-- </div> -->
   <script src="selected_region.js" charset="utf-8"></script>
+  <!-- bootstrap js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
