@@ -80,6 +80,19 @@ img#img1 {
   border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
 }
+#sel1 {
+  position: absolute;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 33px;
+  color: #FFFFFF;
+  left: 535px;
+  top: 250px;
+  user-select: none;
+  opacity: .65;
+}
 
 .bu1 {
   padding: 0%;
