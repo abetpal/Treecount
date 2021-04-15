@@ -47,8 +47,9 @@
   </div>
   <!-- <div style="display:inline;position:relative;top:  150px;"> -->
   <div style="display:flex;justify-content: center;align-items: center;padding: 20px 24px; margin:10px; margin-top: 50px;">
-    <form method="post" class="form-inline" enctype="multipart/form-data" action="{{ url_for('predictCaptionnn') }}">
+    <!-- <form method="post" class="form-inline" enctype="multipart/form-data" action="{{ url_for('predictCaptionnn') }}"> -->
 
+<!-- upload image div -->
       <div class="up btn buttonclass" style="padding: 10px;">
         <img id="img1" src="images/Vector.png" alt="upload" style="height: 20px;width: 20px;">
 
@@ -57,7 +58,10 @@
 
         <label id="tex" for="uploader" style="font-family: Ubuntu;font-style: normal;font-size:18px ;">Upload image</label>
       </div>
+
       <div style="width: 10px;"></div>
+
+      <!-- reselect region div -->
       <div class="re btn buttonclass" style="text-align: center; ">
         <button id="reselect" class="bu1" type="button">
           <img src="images/refresh.png" id="re1" alt="reload">
@@ -65,9 +69,15 @@
           <p class="bu2" id='bu2' style="font-family: Ubuntu;font-size:18px;font-style: normal;">Reselect Region</p>
         </button>
       </div>
+
       <div style="width: 10px;"></div>
+
+      <!-- count div and form to send to backend flask -->
+      <form method="post" class="form-inline" enctype="multipart/form-data" action="{{ url_for('predictCaptionnn') }}">
       <!-- <div class="co" onclick="window.location.href='result.html';" style="justify-content: center; text-align: center;"> -->
       <div class="co btn buttonclass" style="justify-content: center; text-align: center;">
+<!-- this input will send the marked image -->
+        <input type="file" name="sendimg" id="sendimage"value="" src="" hidden>
         <button id="co2" class="co2" type="submit" value="Submit">
           <!--  this will submit the form -->
           <p class="co3" id='co3' style="font-family: Ubuntu;font-size:18px;font-style: normal;">Count</p>
