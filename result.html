@@ -5,46 +5,54 @@
 -->
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width= device-width, initial-scale= 1.0">
-        <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
-        <title>Treecount</title>
-        <link rel="shortcut icon" href="https://raw.githubusercontent.com/abetpal/portfolio/master/images/myAvatar.png">
-        <link rel="stylesheet" href="result.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="navbar">
-            <p class="con1"><span style="color: #53FF7E;">Tree</span><span style="color: #ffffff;">count</span></p>
-        </div>
-        <div class="content">
-            <div class="count">
-                <p id="count1">Tree count in selected area</p>
-                <p id="count2">44</p>
-                <form style="display: block;background: #324758;border-radius: 8px;"action="" method="post">
-                    <input type="text" id="region" name="region" placeholder="Enter name of selected region">
-                </form>
-                <div id ="bu3">
-                    <div onclick="window.location.href='select_region.html';" class="up" style="padding: 10px;display: inline-block;">
-                        <img id="img2" src="images/upload.png" alt="upload" style="height: 20px;width: 20px;">
-                        <img id="img1" src="images/Vector.png" alt="upload" style="height: 20px;width: 20px;">
-                        <p id="tex"  style="padding-left:10px;font-family: Ubuntu;font-style: normal;font-size:18px ;display: inline-block;"> Upload another image</p>
-                      </div>
-                </div>
-                <div style="display: inline-block;padding: 10px;"></div>
-                <div id ="bu4">
-                    <div class="up" style="padding: 10px;display: inline-block;">
-                        <img id="img2" src="images/save1.png" alt="upload" style="height: 20px;width: 20px;">
-                        <img id="img1" src="images/save2.png" alt="upload" style="height: 20px;width: 20px;">
-                        <p id="tex"  style="padding-left:10px;font-family: Ubuntu;font-style: normal;font-size:18px ;display: inline-block;">Save results</p>
-                      </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width, initial-scale= 1.0">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title>Treecount</title>
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/abetpal/portfolio/master/images/myAvatar.png">
+    <link rel="stylesheet" href="result.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <p class="con1"><span style="color: #53FF7E;">Tree</span><span style="color: #ffffff;">count</span></p>
+    </div>
+    <div class="content">
+        <div class="count">
+            <p id="count1">Tree count in selected area</p>
+            <p id="count2">44</p>
+            <form style="display: block;background: #324758;border-radius: 8px;" action="" method="post">
+                <input type="text" id="region" name="region" placeholder="Enter name of selected region">
+            </form>
+            <div id="bu3">
+                <div onclick="window.location.href='select_region.html';" class="up"
+                    style="padding: 10px;display: inline-block;">
+                    <img id="img2" src="images/upload.png" alt="upload" style="height: 20px;width: 20px;">
+                    <img id="img1" src="images/Vector.png" alt="upload" style="height: 20px;width: 20px;">
+                    <p id="tex"
+                        style="padding-left:10px;font-family: Ubuntu;font-style: normal;font-size:18px ;display: inline-block;">
+                        Upload another image</p>
                 </div>
             </div>
-            <div class="imag" style="color: #ffffff;">
-                <p>will do later</p>
+            <div style="display: inline-block;padding: 10px;"></div>
+            <div id="bu4">
+                <div class="up" style="padding: 10px;display: inline-block;">
+                    <img id="img2" src="images/save1.png" alt="upload" style="height: 20px;width: 20px;">
+                    <img id="img1" src="images/save2.png" alt="upload" style="height: 20px;width: 20px;">
+                    <p id="tex"
+                        style="padding-left:10px;font-family: Ubuntu;font-style: normal;font-size:18px ;display: inline-block;">
+                        Save results</p>
+                </div>
             </div>
         </div>
-    </body>
+        <div class="imag" style="color: #ffffff;">
+            <img id="img4" src="images/img1.png" alt="result">
+        </div>
+    </div>
+</body>
+
 </html>
